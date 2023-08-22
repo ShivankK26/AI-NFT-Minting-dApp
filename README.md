@@ -4,7 +4,7 @@
 
 
 
-In this Project, I've built an AI NFT Minting dApp using which one can generate AI NFTs and easily mint them on Opensea. The WebApp is easy to use with a Simple UI built using TailwindCSS. So, us it and enjoy ;)
+In this Project, I've built an AI NFT Minting dApp using which one can generate AI NFTs and easily mint them on Opensea. The WebApp is easy to use with a Simple UI built using TailwindCSS. So, use it and enjoy ;)
 
 Use the `README.md` to get started.
 
