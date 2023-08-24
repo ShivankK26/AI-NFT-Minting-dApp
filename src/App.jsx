@@ -37,7 +37,7 @@ The response.data will contain the Blob, and we create an object URL using URL.c
         `https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5`,
         {
           headers: {
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${AUTH_API_KEY}`,
           },
           method: "POST",
           inputs: prompt,
@@ -69,7 +69,7 @@ The response.data will contain the Blob, and we create an object URL using URL.c
     try {
   
       const nftstorage = new NFTStorage({
-        token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGNlNTg3N2VGN0NDODk1QmE3NUZDODc0QzQ1ZDk3ODllZjYyOTk4MjAiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5MTQwNDI5MTA2NSwibmFtZSI6IkFJIE5GVCBBcHAifQ.9sVu0bGhfl0Fy6DM8H8IoRDqw4OKvC80zeQ8L3F99Z8`,
+        token: `${IPFS_API_KEY}`,
       })
   
       const store = await nftstorage.store({
@@ -102,11 +102,11 @@ The response.data will contain the Blob, and we create an object URL using URL.c
           chain: "polygon",
           name: name?.length > 0 ? name : "AI NFT",
           description: description?.length > 0 ? description : "AI generated NFT",
-          mint_to_address: address?.length > 0 ? address : "0x5A1dE476BF6DAa8A802C346a9D9118F772dCe838", // wallet address
+          mint_to_address: address?.length > 0 ? address : CONTRACT_ADDRESS, // wallet address
         },
         {
           headers: {
-            Authorization: `37608633-8547-420c-9753-e537b17c74e0`,
+            Authorization: `${KEY}`,
           }
         }
       );
